@@ -9,11 +9,28 @@
       <sourceFolder url="file://$MODULE_DIR$/../../hello-impl/src/test/scala" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../hello-impl/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/../../hello-impl/src/test/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../hello-impl/src/test/java" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/../../hello-impl/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="hello-api" exported="" />
+    <orderEntry type="library" name="sbt: tyrex:tyrex:1.0.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.postgresql:postgresql:42.1.4:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.zaxxer:HikariCP:3.4.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.typesafe.slick:slick_2.13:3.3.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.typesafe.slick:slick-hikaricp_2.13:3.3.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.typesafe.play:play-jdbc_2.13:2.8.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.typesafe.play:play-jdbc-api_2.13:2.8.1:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: com.typesafe.akka:akka-persistence-cassandra_2.13:0.103:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.lightbend.lagom:lagom-scaladsl-persistence-jdbc_2.13:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: com.lightbend.lagom:lagom-scaladsl-persistence-cassandra_2.13:1.6.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.lightbend.lagom:lagom-persistence-jdbc-core_2.13:1.6.2:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: com.lightbend.lagom:lagom-persistence-cassandra-core_2.13:1.6.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.googlecode.usc:jdbcdslog:1.0.6.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.github.dnvriend:akka-persistence-jdbc_2.13:3.5.3:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: com.datastax.cassandra:cassandra-driver-core:3.8.0:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: junit:junit:4.12:jar" level="project" />
     <orderEntry type="library" name="sbt: org.xerial.snappy:snappy-java:1.1.7.2:jar" level="project" />
     <orderEntry type="library" name="sbt: org.slf4j:slf4j-api:1.7.30:jar" level="project" />
     <orderEntry type="library" name="sbt: org.slf4j:log4j-over-slf4j:1.7.30:jar" level="project" />
@@ -42,7 +59,6 @@
     <orderEntry type="library" name="sbt: org.apache.kafka:kafka-clients:2.1.1:jar" level="project" />
     <orderEntry type="library" name="sbt: org.agrona:agrona:1.4.0:jar" level="project" />
     <orderEntry type="library" name="sbt: log4j:log4j:1.2.17:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="sbt: junit:junit:4.12:jar" level="project" />
     <orderEntry type="library" name="sbt: joda-time:joda-time:2.10.5:jar" level="project" />
     <orderEntry type="library" name="sbt: javax.inject:javax.inject:1:jar" level="project" />
     <orderEntry type="library" name="sbt: javax.cache:cache-api:1.1.1:jar" level="project" />
@@ -89,7 +105,6 @@
     <orderEntry type="library" name="sbt: com.typesafe.akka:akka-persistence_2.13:2.6.4:jar" level="project" />
     <orderEntry type="library" name="sbt: com.typesafe.akka:akka-persistence-typed_2.13:2.6.4:jar" level="project" />
     <orderEntry type="library" name="sbt: com.typesafe.akka:akka-persistence-query_2.13:2.6.4:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.typesafe.akka:akka-persistence-cassandra_2.13:0.103:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: com.typesafe.akka:akka-persistence-cassandra-launcher_2.13:0.103:jar" level="project" />
     <orderEntry type="library" name="sbt: com.typesafe.akka:akka-parsing_2.13:10.1.11:jar" level="project" />
     <orderEntry type="library" name="sbt: com.typesafe.akka:akka-http_2.13:10.1.11:jar" level="project" />
@@ -118,7 +133,6 @@
     <orderEntry type="library" name="sbt: com.lightbend.lagom:lagom-scaladsl-projection_2.13:1.6.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.lightbend.lagom:lagom-scaladsl-play-json_2.13:1.6.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.lightbend.lagom:lagom-scaladsl-persistence_2.13:1.6.2:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.lightbend.lagom:lagom-scaladsl-persistence-cassandra_2.13:1.6.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.lightbend.lagom:lagom-scaladsl-kafka-client_2.13:1.6.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.lightbend.lagom:lagom-scaladsl-kafka-broker_2.13:1.6.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.lightbend.lagom:lagom-scaladsl-dev-mode_2.13:1.6.2:jar" level="project" />
@@ -129,7 +143,6 @@
     <orderEntry type="library" name="sbt: com.lightbend.lagom:lagom-projection-core_2.13:1.6.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.lightbend.lagom:lagom-persistence-testkit_2.13:1.6.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.lightbend.lagom:lagom-persistence-core_2.13:1.6.2:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.lightbend.lagom:lagom-persistence-cassandra-core_2.13:1.6.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.lightbend.lagom:lagom-logback_2.13:1.6.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.lightbend.lagom:lagom-kafka-client_2.13:1.6.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.lightbend.lagom:lagom-kafka-broker_2.13:1.6.2:jar" level="project" />
@@ -168,8 +181,16 @@
     <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-databind:2.10.3:jar" level="project" />
     <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-core:2.10.3:jar" level="project" />
     <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-annotations:2.10.3:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.datastax.cassandra:cassandra-driver-core:3.8.0:jar" level="project" />
     <orderEntry type="library" name="sbt: ch.qos.logback:logback-core:1.2.3:jar" level="project" />
     <orderEntry type="library" name="sbt: ch.qos.logback:logback-classic:1.2.3:jar" level="project" />
+    <orderEntry type="module-library">
+      <library name="sbt: unmanaged-sources-and-docs">
+        <CLASSES />
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.ivy2/cache/io.netty/netty-transport-native-epoll/srcs/netty-transport-native-epoll-4.1.34.Final-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>

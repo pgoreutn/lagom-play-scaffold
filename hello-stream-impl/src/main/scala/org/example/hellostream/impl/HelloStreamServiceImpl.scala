@@ -7,8 +7,8 @@ import org.example.hello.api.HelloService
 import scala.concurrent.Future
 
 /**
-  * Implementation of the HelloStreamService.
-  */
+ * Implementation of the HelloStreamService.
+ */
 class HelloStreamServiceImpl(helloService: HelloService) extends HelloStreamService {
   def stream = ServiceCall { hellos =>
     Future.successful(hellos.mapAsync(8)(helloService.hello(_).invoke()))

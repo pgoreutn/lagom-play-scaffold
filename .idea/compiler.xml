@@ -4,6 +4,7 @@
     <bytecodeTargetLevel>
       <module name="hello-impl" target="1.8" />
       <module name="hello-stream-impl" target="1.8" />
+      <module name="web-gateway" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

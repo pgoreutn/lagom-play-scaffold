@@ -18,17 +18,16 @@ import akka.util.Timeout
 import com.lightbend.lagom.scaladsl.api.transport.BadRequest
 
 /**
-  * Implementation of the HelloService.
-  */
+ * Implementation of the HelloService.
+ */
 class HelloServiceImpl(
   clusterSharding: ClusterSharding,
-  persistentEntityRegistry: PersistentEntityRegistry
-)(implicit ec: ExecutionContext)
+  persistentEntityRegistry: PersistentEntityRegistry)(implicit ec: ExecutionContext)
   extends HelloService {
 
   /**
-    * Looks up the entity for the given ID.
-    */
+   * Looks up the entity for the given ID.
+   */
   private def entityRef(id: String): EntityRef[HelloCommand] =
     clusterSharding.entityRefFor(HelloState.typeKey, id)
 
@@ -52,11 +51,10 @@ class HelloServiceImpl(
     // Tell the aggregate to use the greeting message specified.
     ref
       .ask[Confirmation](
-        replyTo => UseGreetingMessage(request.message, replyTo)
-      )
+        replyTo => UseGreetingMessage(request.message, replyTo))
       .map {
         case Accepted => Done
-        case _        => throw BadRequest("Can't upgrade the greeting message.")
+        case _ => throw BadRequest("Can't upgrade the greeting message.")
       }
   }
 
@@ -68,8 +66,7 @@ class HelloServiceImpl(
     }
 
   private def convertEvent(
-    helloEvent: EventStreamElement[HelloEvent]
-  ): api.GreetingMessageChanged = {
+    helloEvent: EventStreamElement[HelloEvent]): api.GreetingMessageChanged = {
     helloEvent.event match {
       case GreetingMessageChanged(msg) =>
         api.GreetingMessageChanged(helloEvent.entityId, msg)

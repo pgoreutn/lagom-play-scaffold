@@ -2,14 +2,14 @@ package org.example.hellostream.api
 
 import akka.NotUsed
 import akka.stream.scaladsl.Source
-import com.lightbend.lagom.scaladsl.api.{Descriptor, Service, ServiceCall}
+import com.lightbend.lagom.scaladsl.api.{ Descriptor, Service, ServiceCall }
 
 /**
-  * The hello stream interface.
-  *
-  * This describes everything that Lagom needs to know about how to serve and
-  * consume the HelloStream service.
-  */
+ * The hello stream interface.
+ *
+ * This describes everything that Lagom needs to know about how to serve and
+ * consume the HelloStream service.
+ */
 trait HelloStreamService extends Service {
 
   def stream: ServiceCall[Source[String, NotUsed], Source[String, NotUsed]]
@@ -19,8 +19,7 @@ trait HelloStreamService extends Service {
 
     named("hello-stream")
       .withCalls(
-        namedCall("stream", stream)
-      ).withAutoAcl(true)
+        namedCall("stream", stream)).withAutoAcl(true)
   }
 }
 
