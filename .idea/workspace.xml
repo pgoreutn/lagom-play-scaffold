@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ac68db0-f333-40e0-9f06-4b7ca413e5f3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules/docs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/docs.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/hello-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/hello-api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/hello-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/hello-build.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/hello-impl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/hello-impl.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/hello-stream-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/hello-stream-api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/hello-stream-impl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/hello-stream-impl.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/integration-tests.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/integration-tests.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/lagom-internal-meta-project-cassandra.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/lagom-internal-meta-project-cassandra.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/lagom-internal-meta-project-kafka.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/lagom-internal-meta-project-kafka.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/lagom-internal-meta-project-service-locator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/lagom-internal-meta-project-service-locator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/load-tests.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/load-tests.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/web-gateway.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/web-gateway.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-impl/src/main/resources/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/hello-impl/src/main/resources/application.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-impl/src/main/scala/org/example/hello/impl/HelloLoader.scala" beforeDir="false" afterPath="$PROJECT_DIR$/hello-impl/src/main/scala/org/example/hello/impl/HelloLoader.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/Dependencies.scala" beforeDir="false" afterPath="$PROJECT_DIR$/project/Dependencies.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/plugins.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/project/plugins.sbt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -239,7 +221,7 @@
       <workItem from="1593423297830" duration="5848000" />
       <workItem from="1593444255819" duration="12737000" />
       <workItem from="1593677589015" duration="287000" />
-      <workItem from="1593677930266" duration="1232000" />
+      <workItem from="1593677930266" duration="1584000" />
     </task>
     <servers />
   </component>
