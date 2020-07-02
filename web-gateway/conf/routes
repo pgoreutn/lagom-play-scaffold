@@ -7,3 +7,4 @@ GET         /                                        controllers.Application.ind
 
 # API urls
 GET         /hello/:id                               controllers.Application.hello(id)
+POST        /hello/:id                               controllers.Application.useGreeting(id)

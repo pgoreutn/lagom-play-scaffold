@@ -5,7 +5,7 @@ organization in ThisBuild := "org.example"
 version in ThisBuild ~= (_.replace('+', '-'))
 
 // the Scala version that will be used for cross-compiled libraries
-scalaVersion in ThisBuild := "2.13.0"
+scalaVersion in ThisBuild := "2.12.8"
 
 lazy val `hello` = (project in file("."))
   .aggregate(`hello-api`, `hello-impl`, `hello-stream-api`, `hello-stream-impl`)
