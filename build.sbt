@@ -18,12 +18,13 @@ lazy val `hello-api` = (project in file("hello-api"))
   )
 
 lazy val `hello-impl` = (project in file("hello-impl"))
-  .enablePlugins(LagomScala)
+  .enablePlugins(LagomScala, JavaAgent)
   .settings(
     libraryDependencies ++= Seq(
       lagomScaladslPersistenceJdbc,
       postgresDriver,
       lagomScaladslKafkaBroker,
+      kamonBundle,
       lagomScaladslTestKit,
       macwire,
       scalaTest

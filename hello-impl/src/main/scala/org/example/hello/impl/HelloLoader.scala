@@ -13,6 +13,31 @@ import org.example.hello.api.HelloService
 import play.api.db.HikariCPComponents
 import play.api.libs.ws.ahc.AhcWSComponents
 
+import scala.concurrent.ExecutionContext
+
+trait HelloComponents extends LagomServerComponents
+  with JdbcPersistenceComponents
+  with HikariCPComponents
+  with AhcWSComponents {
+
+  implicit def executionContext: ExecutionContext
+
+  // Bind the service that this server provides
+  override lazy val lagomServer: LagomServer = serverFor[HelloService](wire[HelloServiceImpl])
+
+  // Register the JSON serializer registry
+  override lazy val jsonSerializerRegistry: JsonSerializerRegistry = HelloSerializerRegistry
+
+  // Start the monitoring system
+  lazy val startMonitoring = wire[StartMonitoring]
+
+  // Initialize the sharding of the Aggregate. The following starts the aggregate Behavior under
+  // a given sharding entity typeKey.
+  clusterSharding.init(
+    Entity(HelloState.typeKey)(
+      entityContext => HelloBehavior.create(entityContext)))
+}
+
 class HelloLoader extends LagomApplicationLoader {
 
   override def load(context: LagomApplicationContext): LagomApplication =
@@ -31,18 +56,7 @@ abstract class HelloApplication(context: LagomApplicationContext)
   with JdbcPersistenceComponents
   with HikariCPComponents
   with LagomKafkaComponents
-  with AhcWSComponents {
-
-  // Bind the service that this server provides
-  override lazy val lagomServer: LagomServer = serverFor[HelloService](wire[HelloServiceImpl])
-
-  // Register the JSON serializer registry
-  override lazy val jsonSerializerRegistry: JsonSerializerRegistry = HelloSerializerRegistry
-
-  // Initialize the sharding of the Aggregate. The following starts the aggregate Behavior under
-  // a given sharding entity typeKey.
-  clusterSharding.init(
-    Entity(HelloState.typeKey)(
-      entityContext => HelloBehavior.create(entityContext)))
+  with AhcWSComponents
+  with HelloComponents {
 
 }

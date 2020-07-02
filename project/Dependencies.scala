@@ -11,6 +11,7 @@ object Versions {
   val postgresDriverVersion       = "42.1.4"
   val scalatestVersion            = "3.1.1"
   val gatlingVersion              = "3.1.0"
+  val kamonVersion                = "2.1.0"
 }
 
 
@@ -24,6 +25,7 @@ object Dependencies {
   val macwire                     = "com.softwaremill.macwire"     %% "macros"                                          % macwireVersion          % Provided
   val scalaGuice                  = "net.codingwell"               %% "scala-guice"                                     % scalaGuiceVersion
   val postgresDriver              = "org.postgresql"                % "postgresql"                                      % postgresDriverVersion
+  val kamonBundle                 = "io.kamon"                     %% "kamon-bundle"                                    % kamonVersion
   val scalaTest                   = "org.scalatest"                %% "scalatest"                                       % scalatestVersion        % Test
   val gatlingCharts               = "io.gatling.highcharts"         % "gatling-charts-highcharts"                       % gatlingVersion          % Test
   val gatling                     = "io.gatling"                    % "gatling-test-framework"                          % gatlingVersion          % Test

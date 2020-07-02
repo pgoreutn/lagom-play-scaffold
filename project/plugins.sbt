@@ -12,3 +12,6 @@ addSbtPlugin("io.gatling" % "gatling-sbt" % "3.1.0")
 
 // Paradox - documentation site
 addSbtPlugin("com.lightbend.paradox" % "sbt-paradox" % "0.3.5")
+
+// Kamon - monitoring
+addSbtPlugin("io.kamon" % "sbt-kanela-runner-play-2.8" % "2.0.6")
