@@ -4,7 +4,7 @@ object Versions {
 
   val slf4jApiVersion             = "1.7.28"
   val playJsonVersion             = "2.7.4"
-  val playSlickVersion            = "3.0.0"
+  val playSlickVersion            = "5.0.0"
   val akkaDiscoveryEC2Version     = "1.0.5"
   val macwireVersion              = "2.3.3"
   val scalaGuiceVersion           = "4.2.6"

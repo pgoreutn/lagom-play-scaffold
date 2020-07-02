@@ -17,7 +17,7 @@ trait HelloStreamService extends Service {
   override final def descriptor: Descriptor = {
     import Service._
 
-    named("hello-stream")
+    named("hello-stream-service")
       .withCalls(
         namedCall("stream", stream)).withAutoAcl(true)
   }

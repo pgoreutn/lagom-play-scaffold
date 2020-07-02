@@ -31,6 +31,9 @@ lazy val `hello-impl` = (project in file("hello-impl"))
     )
   )
   .settings(lagomForkedTestSettings)
+  .settings(
+    lagomServiceHttpPort := 11000
+  )
   .dependsOn(`hello-api`)
 
 lazy val `hello-stream-api` = (project in file("hello-stream-api"))
@@ -49,14 +52,19 @@ lazy val `hello-stream-impl` = (project in file("hello-stream-impl"))
       scalaTest
     )
   )
+  .settings(
+    lagomServiceHttpPort := 11001
+  )
   .dependsOn(`hello-stream-api`, `hello-api`)
 
 lazy val `web-gateway` = (project in file("web-gateway"))
-  .enablePlugins(PlayScala)
+  .enablePlugins(PlayScala, LagomScala)
   .settings(commonSettings)
   .settings(dockerSettings)
   .settings(
     libraryDependencies ++= Seq(
+      lagomScaladslClient,
+      lagomScaladslDevMode,
       guice,
       scalaGuice,
       ehcache,
@@ -66,6 +74,10 @@ lazy val `web-gateway` = (project in file("web-gateway"))
       scalaTest
     )
   )
+  .settings(
+    lagomServiceHttpPort := 9000
+  )
+  .dependsOn(`hello-api`, `hello-stream-api`)
 
 lazy val `load-tests` = (project in file("load-tests"))
   .enablePlugins(GatlingPlugin)
@@ -105,21 +117,19 @@ def getDockerBaseImage(): String = sys.props.get("java.version") match {
 }
 
 lazy val commonSettings = Seq(
-  scalaVersion := "2.12.8",
   scalacOptions ++= Seq(
     "-encoding", "UTF-8",
     "-target:jvm-1.8",
     "-Xlog-reflective-calls",
     "-Xlint",
     "-Ywarn-unused",
-    "-Ywarn-unused-import",
     "-deprecation",
     "-feature",
     "-language:_",
     "-unchecked"
   ),
 
-  scalacOptions in (Compile, console) --= Seq("-Ywarn-unused", "-Ywarn-unused-import"),
+  scalacOptions in (Compile, console) --= Seq("-Ywarn-unused"),
   scalacOptions in (Test, console) := (scalacOptions in (Compile, console)).value,
 
   scalariformPreferences := scalariformPreferences.value

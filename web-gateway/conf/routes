@@ -4,3 +4,6 @@
 
 # Public urls
 GET         /                                        controllers.Application.index()
+
+# API urls
+GET         /hello/:id                               controllers.Application.hello(id)
